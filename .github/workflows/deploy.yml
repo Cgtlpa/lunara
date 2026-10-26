@@ -30,7 +30,14 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build React app
-        run: bun run build
+        run: |
+          bun run build
+          echo "=== Root files ==="
+          ls -la
+          echo "=== Build output directories ==="
+          find . -maxdepth 3 -type d \( -name dist -o -name .output -o -name build \) -not -path './node_modules/*'
+          echo "=== Generated HTML files ==="
+          find . -maxdepth 4 -name '*.html' -not -path './node_modules/*'
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
@@ -41,4 +48,6 @@ jobs:
           path: ./dist
 
       - name: Deploy website
+        id: deployment
         uses: actions/deploy-pages@v4
+
