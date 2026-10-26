@@ -4,6 +4,7 @@ import { Menu, X, Github } from "lucide-react";
 import { Brand } from "./Brand";
 import { btn } from "./Button";
 import { GITHUB_URL } from "@/lib/site";
+import { wrap } from "./Section";
 
 const linkCls = "text-sm text-muted-foreground transition-colors hover:text-foreground";
 
@@ -11,8 +12,8 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
-      <nav aria-label="Main" className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5">
+    <header className="sticky top-0 z-40 border-b border-border bg-background">
+      <nav aria-label="Main" className={`${wrap} flex h-14 items-center justify-between`}>
         <Brand />
         <div className="hidden items-center gap-7 md:flex">
           <Link to="/" className={linkCls} activeOptions={{ exact: true }} activeProps={{ className: "text-foreground" }}>Home</Link>
