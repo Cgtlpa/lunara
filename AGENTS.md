@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Edition download entries live in src/lib/site.ts; set downloadUrl to a real ISO URL to enable a button (null keeps it disabled) — single place to update releases.
+- Site chrome (Navbar/Footer) wraps <Outlet /> in __root.tsx; shared UI lives in src/components/site.
