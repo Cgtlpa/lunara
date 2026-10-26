@@ -54,7 +54,7 @@ export function LuaSketch() {
         <code>
           <span className="text-accent">-- describe the system you want</span>{"\n"}
           <span className="text-primary-soft">system</span> {"{"}{"\n"}
-          {"  "}hostname = <span className="text-primary">"lunar"</span>,{"\n"}
+          {"  "}hostname = <span className="text-primary">"selene"</span>,{"\n"}
           {"  "}desktop  = <span className="text-primary">"instantwm"</span>,{"\n"}
           {"  "}packages = {"{"} <span className="text-primary">"git"</span>, <span className="text-primary">"neovim"</span> {"}"},{"\n"}
           {"}"}
